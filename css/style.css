@@ -8,6 +8,7 @@
   font-size: 60px;
   line-height: 170px;
   font-family: 'Syncopate', sans-serif;
+  font-weight: bolder;
 }
 
 .sub {
@@ -25,9 +26,65 @@
 
 #top {
   background-color: transparent;
-  opacity: .75;
+  opacity: .9;
+}
+/* Stick Man */
+.man1 {
+  position: absolute;
+  height: 200px;
+  left: 0%;
+  top: 20%;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
 
+.man2 {
+  position: absolute;
+  height: 200px;
+  left: 0%;
+  top: 40%;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+.man3 {
+  position: absolute;
+  height: 200px;
+  left: 0%;
+  top: 60%;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+.man4 {
+  position: absolute;
+  height: 200px;
+  left: 0%;
+  top: 80%;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
 
 /* Blackstar Stuff */
 
@@ -37,7 +94,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: url('../space.jpg');
+  background: url('../space3.jpg');
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -235,4 +292,8 @@ body {
   background: rgba(80,80,80,0.3);
   border:1px solid rgba(102,102,102,0.5);
   visibility:hidden;
+}
+
+.hidden {
+  display: none;
 }

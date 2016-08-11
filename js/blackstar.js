@@ -1,11 +1,25 @@
-var override = false;
+var starOverride = false;
+var stickOverride = false;
 
 var blackstarClicked = function() {
   var timeoutHandle;
+  var stickTimeoutHandle;
   console.log('cool!');
+  if (Math.random() <= 0.2) {
+    if (stickOverride === false) {
+      createStick();
+      spawnStick($('.man1'), 5000);
+      spawnStick($('.man2'), 5000);
+      spawnStick($('.man3'), 5000);
+      spawnStick($('.man4'), 5000);
+      stickOverride = true;
+      stickTimeoutHandle = window.setTimeout(stickmanOverride, 10000);
+    }
+  }
+
   starfield();
-  if (override === false) {
-    override = true;
+  if (starOverride === false) {
+    starOverride = true;
     timeoutHandle = window.setTimeout(manualOverride, 10000);
   }
   else {
@@ -14,38 +28,81 @@ var blackstarClicked = function() {
   }
 };
 
+var spawnStick = function($man, speed) {
+
+  $man.animate({
+    "left": "100%"
+  }, speed);
+};
+
+var createStick = function() {
+  var man;
+  var choice = Math.random();
+
+  if (choice >= 0.75) {
+    man = $("<img src='stick_man.png' class='man1 hidden' id='man'/>");
+  }
+  else if (choice >= 0.5) {
+    man = $("<img src='stick_man.png' class='man2 hidden' id='man'/>");
+  }
+  else if (choice >= 0.25) {
+    man = $("<img src='stick_man.png' class='man3 hidden' id='man'/>");
+  }
+  else {
+    man = $("<img src='stick_man.png' class='man4 hidden' id='man'/>");
+  }
+
+  man.appendTo('.feature');
+  $('.man1').toggleClass('hidden');
+  $('.man2').toggleClass('hidden');
+  $('.man3').toggleClass('hidden');
+  $('.man4').toggleClass('hidden');
+};
+
+var getTop = function() {
+  return Math.random() * 1500;
+};
+
+var giveTop = function() {
+  return 'top';
+};
+
 var master = new TimelineMax({delay:0}),
-  bg = $("#featureBackground"),
-  centerY = $(".body").height() / 2,
-  centerX = $(".body").width() / 2,
-  radius = Math.max(centerX, centerY),
-  _isOldIE = (document.all && !document.addEventListener);
+bg = $("#featureBackground"),
+centerY = $(".body").height() / 2,
+centerX = $(".body").width() / 2,
+radius = Math.max(centerX, centerY),
+_isOldIE = (document.all && !document.addEventListener);
 
 var apprentice = new TimelineMax({delay:0}),
-  bg = $("#featureBackground"),
-  centerY = $(".body").height() / 2,
-  centerX = $(".body").width() / 2,
-  radius = Math.max(centerX, centerY),
-  _isOldIE = (document.all && !document.addEventListener);
+bg = $("#featureBackground"),
+centerY = $(".body").height() / 2,
+centerX = $(".body").width() / 2,
+radius = Math.max(centerX, centerY),
+_isOldIE = (document.all && !document.addEventListener);
 
 
 /*master.eventCallback("onUpdate", function() {});*/
 master.eventCallback("onComplete", function()  {
-  if (!override) {
+  if (!starOverride) {
     master.kill();
     $('.star').remove();
   }
   master.add(starfield());
 });
 
-
 master.add( starfield() );
-//.insert( starfieldDistant() )
-//.insert( nebula() );
 
 function manualOverride() {
-  if (override === true) {
-    override = false;
+  if (starOverride === true) {
+    starOverride = false;
+    console.log('farewell');
+  }
+}
+
+function stickmanOverride() {
+  if (stickOverride === true) {
+    stickOverride = false;
     console.log('farewell');
   }
 }
