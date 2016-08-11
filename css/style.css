@@ -128,6 +128,10 @@ blackstar:after {
 body {
   color: white;
   text-align: center;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;              /* optional, center the image */
+
 }
 
 
@@ -151,14 +155,14 @@ body {
   font-size: 80%;
 }
 
- .neb {
+.neb {
   position: absolute;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
   height: 100px;
   width: 100px;
-   -webkit-transform-origin: center center;
+  -webkit-transform-origin: center center;
 
 }
 
@@ -195,7 +199,7 @@ body {
   height: 5px;
   border-radious: 15px;
   #-webkit-filter: blur(2px);
-background: -webkit-linear-gradient(left, rgba(36,83,193,0.12) 0%, rgba(198,215,239,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(36,83,193,0.12) 0%, rgba(198,215,239,1) 100%);
 
 }
 
