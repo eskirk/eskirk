@@ -1,14 +1,16 @@
 var override = false;
 
 var blackstarClicked = function() {
+  var timeoutHandle;
   console.log('cool!');
   starfield();
   if (override === false) {
     override = true;
-    setTimeout(manualOverride, 6000);
+    timeoutHandle = window.setTimeout(manualOverride, 6000);
   }
   else {
-    setTimeout(manualOverride, 6000);
+    window.clearTimeout(timeoutHandle);
+    timeoutHandle = window.setTimeout(manualOverride, 6000);
   }
 };
 
@@ -82,7 +84,7 @@ function starfield() {
         //x:Math.cos(angle) * (radius + 500),
         bezier: {
           curviness:1.25,
-          values:[{x:gaRand(0, 1500), y:1500}],
+          values:[{x:gaRand(0, $('#featureAnimation').width()), y:1500}],
           autoRotate: true
         },
         scale:gaRand(1.5, 2),
