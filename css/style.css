@@ -200,7 +200,7 @@ orbit1:after {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
   background: -webkit-linear-gradient(#18242f, #000);
   background: linear-gradient(#18242f, #000);
   z-index: 2;
