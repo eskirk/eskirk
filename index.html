@@ -5,6 +5,10 @@
   <title>Elliot Kirk</title>
   <!-- JS -->
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'   integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='   crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js'></script>
+  <script src='http://www.greensock.com/js/src/plugins/Physics2DPlugin.min.js'></script>
+  <script src=''></script>
+  <script src=''></script>
   <script src='js/blackstar.js'></script>
   <!-- CSS -->
   <link rel='stylesheet' type'text/css' href='css/style.css' />
@@ -27,20 +31,26 @@
     if (angle < 0) {
       angle = angle + 360;
     }
-    var transformPoster = 'star:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    var transformPoster = 'blackstar:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
     document.querySelector('body style').innerHTML = transformPoster;
   }
   </script>
-  <div>
-    <div id='top'>
-      <span class='title'>Elliot Kirk</span>
-      <!-- <span class='sub title'>Computer Science</span> -->
+
+  <div id="featureBox"></div>
+  <div class="feature" id="featureAnimation">
+    <div id='featureBackground' style='pointer-events:none;'></div>
+    <div class='main'>
+      <div id='top'>
+        <span class='title'>Elliot Kirk</span>
+        <span class='sub'>Computer Science at Cal Poly</span>
+      </div>
+      <a href='#' onclick='blackstarClicked()'>
+      <style id='style'></style>
+      <blackstar></blackstar
+      </a>
     </div>
-    <a href='#' onclick='starClicked()'>
-    <style id='style'></style>
-    <star></star
-    </a>
   </div>
+
 
 </body>
 </html>
