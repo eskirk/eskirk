@@ -6,7 +6,7 @@
   margin: 0 auto;
   display: table;
   font-size: 60px;
-  line-height: 150px;
+  line-height: 170px;
   font-family: 'Syncopate', sans-serif;
 }
 
@@ -149,7 +149,7 @@ body {
 
 #featureAnimation, #featureBox {
 
-  height: 800px;
+  height: inherit;
   overflow:hidden;
   line-height: normal;
   font-size: 80%;
