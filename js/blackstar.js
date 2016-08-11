@@ -2,6 +2,7 @@ var starOverride = false;
 var stickOverride = false;
 
 var blackstarClicked = function() {
+  openMenus();
   var timeoutHandle;
   var stickTimeoutHandle;
   console.log('cool!');
@@ -33,6 +34,12 @@ var spawnStick = function($man, speed) {
   $man.animate({
     "left": "100%"
   }, speed);
+};
+
+var openMenus = function() {
+  $('.orbit1').toggleClass('hidden');
+  $('.orbit2').toggleClass('hidden');
+  $('.orbit3').toggleClass('hidden');
 };
 
 var createStick = function() {
@@ -104,6 +111,10 @@ function stickmanOverride() {
   if (stickOverride === true) {
     stickOverride = false;
     console.log('farewell');
+    $('.man1').remove();
+    $('.man2').remove();
+    $('.man3').remove();
+    $('.man4').remove();
   }
 }
 
