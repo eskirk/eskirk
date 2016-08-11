@@ -6,11 +6,11 @@ var blackstarClicked = function() {
   starfield();
   if (override === false) {
     override = true;
-    timeoutHandle = window.setTimeout(manualOverride, 6000);
+    timeoutHandle = window.setTimeout(manualOverride, 10000);
   }
   else {
     window.clearTimeout(timeoutHandle);
-    timeoutHandle = window.setTimeout(manualOverride, 6000);
+    timeoutHandle = window.setTimeout(manualOverride, 10000);
   }
 };
 
@@ -69,13 +69,13 @@ function starfield() {
     console.log('append!');
     stars.push(star);
     angle = Math.random() * Math.PI * 2;
-    delay = gaRand(0.2, 2);
+    delay = gaRand(0.2, 3);
     tl.set(star, {display:"block"}, delay);
 
     TweenLite.set(star, {
       scale:gaRand(0.5, 0.8),
       top:-150,
-      left:gaRand(centerX, centerX *6),
+      left:gaRand(0, $('#featureAnimation').width() / 3),
       motionBlur: true,
       z:0.1});
 
@@ -84,7 +84,7 @@ function starfield() {
         //x:Math.cos(angle) * (radius + 500),
         bezier: {
           curviness:1.25,
-          values:[{x:gaRand(0, $('#featureAnimation').width()), y:1500}],
+          values:[{x:gaRand(0, $('#featureAnimation').width()), y:1800}],
           autoRotate: true
         },
         scale:gaRand(1.5, 2),
