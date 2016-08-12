@@ -16,6 +16,7 @@ var blackstarClicked = function() {
   if (menusOpen === true) {
     console.log('fuck');
     console.log($(document).width() + ' WIDTH!!');
+    console.log($(document).height() + ' HEIGHT!!');
     menusOpen = false;
     $('.orbit1').animate({
       opacity: 0.3,
