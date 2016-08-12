@@ -124,16 +124,16 @@ var createStick = function() {
   var choice = Math.random();
 
   if (choice >= 0.75) {
-    man = $("<img src='stick_man.png' class='man1 hidden' id='man'/>");
+    man = $("<img src='stick_people.png' class='man1 hidden' id='man'/>");
   }
   else if (choice >= 0.5) {
-    man = $("<img src='stick_man.png' class='man2 hidden' id='man'/>");
+    man = $("<img src='stick_people.png' class='man2 hidden' id='man'/>");
   }
   else if (choice >= 0.25) {
-    man = $("<img src='stick_man.png' class='man3 hidden' id='man'/>");
+    man = $("<img src='stick_people.png' class='man3 hidden' id='man'/>");
   }
   else {
-    man = $("<img src='stick_man.png' class='man4 hidden' id='man'/>");
+    man = $("<img src='stick_people.png' class='man4 hidden' id='man'/>");
   }
 
   man.appendTo('.feature');

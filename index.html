@@ -10,8 +10,10 @@
   <script src='js/blackstar.js'></script>
   <!-- CSS -->
   <link rel='stylesheet' type'text/css' href='css/style.css' />
+  <link rel='stylesheet' type'text/css' href='css/hover-min.css' />
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
 </head>
 
 <body>
@@ -33,7 +35,8 @@
     var transformOrbit1 = 'orbit1:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #563e5b);}';
     var transformOrbit2 = 'orbit2:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #563e5b);}';
     var transformOrbit3 = 'orbit3:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #563e5b);}';
-    document.querySelector('body style').innerHTML = transformPoster + transformOrbit1 + transformOrbit2 + transformOrbit3;
+    var transformIcon = 'i:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px);}';
+    document.querySelector('body style').innerHTML = transformPoster + transformOrbit1 + transformOrbit2 + transformOrbit3 + transformIcon;
   }
   </script>
 
@@ -49,9 +52,12 @@
       <style id='style'></style>
       <blackstar></blackstar>
       </a>
-      <orbit1 class='orbit1 innershadow hidden'></orbit1>
-      <orbit2 class='orbit2 innershadow hidden'></orbit2>
-      <orbit3 class='orbit3 innershadow hidden'></orbit3>
+      <orbit1 class='orbit1 innershadow hidden' >
+      </orbit1>
+      <orbit2 class='orbit2 innershadow hidden'>
+      </orbit2>
+      <orbit3 class='orbit3 innershadow hidden'>
+      </orbit3>
 
     </div>
   </div>
