@@ -13,10 +13,12 @@ var menusOpen = false;
 */
 
 var blackstarClicked = function() {
+  console.log($(document).width() + ' WIDTH!!');
+  console.log($(document).height() + ' HEIGHT!!');
   if (menusOpen === true) {
-    console.log('fuck');
-    console.log($(document).width() + ' WIDTH!!');
-    console.log($(document).height() + ' HEIGHT!!');
+    getPos1();
+    getPos2();
+    getPos3();
     menusOpen = false;
     $('.orbit1').animate({
       opacity: 0.3,
@@ -32,19 +34,18 @@ var blackstarClicked = function() {
     });
   }
   else if (menusOpen === false){
-    console.log('who?');
     menusOpen = true;
     $('.orbit1').animate({
       opacity: 1,
-      left: '40%'
+      left: getPos1()
     });
     $('.orbit2').animate({
       opacity: 1,
-      left: '60%'
+      left: getPos2()
     });
     $('.orbit3').animate({
       opacity: 1,
-      top: '60%'
+      top: getPos3()
     });
   }
   var timeoutHandle;
@@ -72,9 +73,29 @@ var blackstarClicked = function() {
   }
 };
 
-function openMenus() {
+var getPos1 = function() {
+  var off1 = $('.orbit1').offset();
+  var rtn = ((off1.left - 80) / ($(document).width())) * 100;
+  console.log('Orbit1: ' + off1.left + ' ' + off1.top);
+  console.log(rtn + '% 1!!!');
+  return rtn + '%';
+};
 
-}
+var getPos2 = function() {
+  var off2 = $('.orbit2').offset();
+  var rtn = ((off2.left + 160) / ($(document).width())) * 100;
+  console.log('Orbit2: ' + off2.left + ' ' + off2.top);
+  console.log(rtn + '% 2!!!');
+  return rtn + '%';
+};
+
+var getPos3 = function() {
+  var off3 = $('.orbit3').offset();
+  var rtn = ((off3.top + 140) / ($(document).height())) * 100;
+  console.log('Orbit3: ' + off3.left + ' ' + off3.top);
+  console.log(rtn + '% 3!!!');
+  return rtn + '%';
+};
 
 var master = new TimelineMax({delay:0}),
 bg = $("#featureBackground"),
@@ -150,7 +171,6 @@ function manualOverride() {
 }
 
 function starfield() {
-  console.log('stars!');
   var tl = new TimelineLite(),
   duration = 3.6,
   minDur = 0.5,
