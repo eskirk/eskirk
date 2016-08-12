@@ -1,6 +1,15 @@
 
 /* Title */
 
+
+body {
+  color: white;
+  text-align: center;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
 .title {
   position: relative;
   margin: 0 auto;
@@ -28,6 +37,8 @@
   background-color: transparent;
   opacity: .9;
 }
+
+
 /* Stick Man */
 .man1 {
   position: absolute;
@@ -121,7 +132,7 @@ blackstar {
   transform: translate(-50%, -50%) translateZ(100px);
   box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), 0 0 50px rgba(118, 218, 255, 0.8);
   background: #efefef;
-  z-index: 2;
+  z-index: 50;
 }
 blackstar:before {
   content: '';
@@ -158,14 +169,17 @@ blackstar:after {
   box-shadow: 0 0 5px #fff;
 }
 
+/* Orbit Stuff */
+
 orbit1 {
+  opacity: 0;
   display: block;
   width: 60px;
   height: 60px;
   border-radius: 100%;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%) translateZ(100px);
   transform: translate(-50%, -50%) translateZ(100px);
   box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), 0 0 50px rgba(118, 218, 255, 0.8);
@@ -208,13 +222,14 @@ orbit1:after {
 }
 
 orbit2 {
+  opacity: 0;
   display: block;
   width: 60px;
   height: 60px;
   border-radius: 100%;
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%) translateZ(100px);
   transform: translate(-50%, -50%) translateZ(100px);
   box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), 0 0 50px rgba(118, 218, 255, 0.8);
@@ -257,12 +272,13 @@ orbit2:after {
 }
 
 orbit3 {
+  opacity: 0;
   display: block;
   width: 60px;
   height: 60px;
   border-radius: 100%;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) translateZ(100px);
   transform: translate(-50%, -50%) translateZ(100px);
@@ -305,6 +321,17 @@ orbit3:after {
   box-shadow: 0 0 5px #fff;
 }
 
+/* Animation Stuff */
+
+@keyframes orbit1move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes pulse {
   44% {
     opacity: 0.3;
@@ -327,15 +354,6 @@ orbit3:after {
   88% {
     opacity: 0.2;
   }
-}
-
-body {
-  color: white;
-  text-align: center;
-  background-size:     cover;                      /* <------ */
-  background-repeat:   no-repeat;
-  background-position: center center;              /* optional, center the image */
-
 }
 
 
@@ -441,6 +459,6 @@ body {
   visibility:hidden;
 }
 
-.hidden {
-  display: none;
-}
+/*.hidden {
+  opacity: 0;
+}*/
