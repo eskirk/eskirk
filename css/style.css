@@ -182,11 +182,9 @@ orbit1 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) translateZ(100px);
   transform: translate(-50%, -50%) translateZ(100px);
-  box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), 0 0 50px rgba(118, 218, 255, 0.8);
-  background: #efefef;
   z-index: 2;
 }
-orbit1:before {
+/*orbit1:before {
   content: '';
   display: block;
   width: 57px;
@@ -203,7 +201,7 @@ orbit1:before {
   animation: pulse 30s cubic-bezier(0.23, 1, 0.32, 1) infinite;
   -webkit-filter: blur(1px);
   filter: blur(1px);
-}
+}*/
 orbit1:after {
   content: '';
   display: block;
@@ -232,8 +230,6 @@ orbit2 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) translateZ(100px);
   transform: translate(-50%, -50%) translateZ(100px);
-  box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), 0 0 50px rgba(118, 218, 255, 0.8);
-  background: #efefef;
   z-index: 2;
 }
 orbit2:before {
@@ -282,11 +278,9 @@ orbit3 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) translateZ(100px);
   transform: translate(-50%, -50%) translateZ(100px);
-  box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), 0 0 50px rgba(118, 218, 255, 0.8);
-  background: #efefef;
   z-index: 2;
 }
-orbit3:before {
+/*orbit3:before {
   content: '';
   display: block;
   width: 57px;
@@ -303,7 +297,7 @@ orbit3:before {
   animation: pulse 30s cubic-bezier(0.23, 1, 0.32, 1) infinite;
   -webkit-filter: blur(1px);
   filter: blur(1px);
-}
+}*/
 orbit3:after {
   content: '';
   display: block;
