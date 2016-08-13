@@ -13,8 +13,6 @@ var menusOpen = false;
 */
 
 var blackstarClicked = function() {
-  console.log($(document).width() + ' WIDTH!!');
-  console.log($(document).height() + ' HEIGHT!!');
   if (menusOpen === true) {
     getPos1();
     getPos2();
@@ -47,7 +45,6 @@ var blackstarClicked = function() {
       opacity: 1,
       top: getPos3()
     });
-    console.log($('blackstar').offset().left + '*L');
   }
   var timeoutHandle;
   var stickTimeoutHandle;
