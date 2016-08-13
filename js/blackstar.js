@@ -47,6 +47,7 @@ var blackstarClicked = function() {
       opacity: 1,
       top: getPos3()
     });
+    console.log($('blackstar').offset().left + '*L');
   }
   var timeoutHandle;
   var stickTimeoutHandle;
@@ -74,26 +75,17 @@ var blackstarClicked = function() {
 };
 
 var getPos1 = function() {
-  var off1 = $('.orbit1').offset();
-  var rtn = ((off1.left - 80) / ($(document).width())) * 100;
-  console.log('Orbit1: ' + off1.left + ' ' + off1.top);
-  console.log(rtn + '% 1!!!');
+  var rtn = ((($(document).width() / 2) - 140) / ($(document).width())) * 100;
   return rtn + '%';
 };
 
 var getPos2 = function() {
-  var off2 = $('.orbit2').offset();
-  var rtn = ((off2.left + 160) / ($(document).width())) * 100;
-  console.log('Orbit2: ' + off2.left + ' ' + off2.top);
-  console.log(rtn + '% 2!!!');
+  var rtn = ((($(document).width() / 2) + 140) / ($(document).width())) * 100;
   return rtn + '%';
 };
 
 var getPos3 = function() {
-  var off3 = $('.orbit3').offset();
-  var rtn = ((off3.top + 140) / ($(document).height())) * 100;
-  console.log('Orbit3: ' + off3.left + ' ' + off3.top);
-  console.log(rtn + '% 3!!!');
+  var rtn = ((($(document).height() / 2) + 140) / ($(document).height())) * 100;
   return rtn + '%';
 };
 

@@ -14,15 +14,6 @@ body {
   width: 100%;
 }
 
-i {
-  z-index: 5000 !important;
-  margin-top: 15px;
-  position: relative;
-}
-i:after {
-  z-index: 5001;
-}
-
 .title {
   position: relative;
   margin: 0 auto;
