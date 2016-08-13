@@ -401,7 +401,7 @@ orbit3:hover {
   position:absolute;
 }
 #featureAnimation, #featureBox, #whyGSAP, .featureTextGreen, .featureTextWhite {
-  width: 98%;
+  width: 100%;
   overflow:hidden;
 }
 #whyGSAP, .featureTextGreen, .featureTextWhite {
