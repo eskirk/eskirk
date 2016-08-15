@@ -533,7 +533,6 @@ orbit3:hover {
   transition: all 0.5s;
   visibility: hidden;
   z-index: 5000;
-  overflow: hidden;
 }
 .wrap .content {
   opacity: 0;
