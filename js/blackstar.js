@@ -12,11 +12,50 @@ var menusOpen = false;
 * Blackstar Stuff
 */
 
+$('.orbit1').on({
+  mouseenter: function() {
+    console.log('lol');
+    $(this).animate({
+      opacity: 0
+    });
+  },
+  mouseleave: function() {
+    $('.item1').animate({
+      opacity: 1
+    });
+  }
+});
+
+//   function() {
+//     console.log('whaaat');
+//       $('.item1').animate({
+//
+//       });
+//   }, function() {
+//     console.log('whooo');
+//     $('.item2').css({
+//       opacity: 1
+//     });
+//   }
+// );
+// $('orbit2').hover(
+//   function() {
+//       $('.item2').animate({
+//         opacity: 1
+//       }, 500);
+//       console.log('whaaat');
+//   }, function() {}
+// );
+// $('orbit3').hover(
+//   function() {
+//       $('.item3').animate({
+//         opacity: 1
+//       }, 500);
+//   }, function() {}
+// );
+
 var blackstarClicked = function() {
   if (menusOpen === true) {
-    getPos1();
-    getPos2();
-    getPos3();
     menusOpen = false;
     $('.orbit1').animate({
       opacity: 0.3,
@@ -76,13 +115,33 @@ var getPos1 = function() {
   return rtn + '%';
 };
 
+var getTextPos1 = function() {
+  var rtn = ((($(document).width() / 2) - 200) / ($(document).width())) * 100;
+  return rtn + '%';
+};
+
 var getPos2 = function() {
   var rtn = ((($(document).width() / 2) + 140) / ($(document).width())) * 100;
   return rtn + '%';
 };
 
+var getTextPos2 = function() {
+  var rtn = ((($(document).width() / 2) + 105) / ($(document).width())) * 100;
+  return rtn + '%';
+};
+
 var getPos3 = function() {
   var rtn = ((($(document).height() / 2) + 140) / ($(document).height())) * 100;
+  return rtn + '%';
+};
+
+var getTextPos3 = function() {
+  var rtn = ((($(document).width() / 2) + 140) / ($(document).width())) * 100;
+  return rtn + '%';
+};
+
+var getVertPos = function() {
+  var rtn = (($(document).height()) * Math.random() / ($(document).height())) * 100;
   return rtn + '%';
 };
 
@@ -135,7 +194,8 @@ var createStick = function() {
 var spawnStick = function($man, speed) {
 
   $man.animate({
-    "left": "100%"
+    left: "100%",
+    top: getVertPos()
   }, speed);
 };
 

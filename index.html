@@ -31,11 +31,51 @@
       angle = angle + 360;
     }
     var transformPoster = 'blackstar:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
-    var transformOrbit1 = 'orbit1:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #563e5b);}';
-    var transformOrbit2 = 'orbit2:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #563e5b);}';
-    var transformOrbit3 = 'orbit3:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #563e5b);}';
+    var transformOrbit1 = 'orbit1:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #111);}';
+    var transformOrbit2 = 'orbit2:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #111);}';
+    var transformOrbit3 = 'orbit3:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #111);}';
     document.querySelector('body style').innerHTML = transformPoster + transformOrbit1 + transformOrbit2 + transformOrbit3;
   }
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('.orbit1').on({
+        mouseenter: function() {
+          $('.item1').animate({
+            opacity: 1
+          });
+        },
+        mouseleave: function() {
+          $('.item1').animate({
+            opacity: 0
+          });
+        }
+      });
+      $('.orbit2').on({
+        mouseenter: function() {
+          $('.item2').animate({
+            opacity: 1
+          });
+        },
+        mouseleave: function() {
+          $('.item2').animate({
+            opacity: 0
+          });
+        }
+      });
+      $('.orbit3').on({
+        mouseenter: function() {
+          $('.item3').animate({
+            opacity: 1
+          });
+        },
+        mouseleave: function() {
+          $('.item3').animate({
+            opacity: 0
+          });
+        }
+      });
+    });
   </script>
 
   <div id="featureBox"></div>
@@ -52,10 +92,26 @@
       </a>
       <orbit1 class='orbit1 innershadow hidden' >
       </orbit1>
+
       <orbit2 class='orbit2 innershadow hidden'>
       </orbit2>
+
       <orbit3 class='orbit3 innershadow hidden'>
       </orbit3>
+
+      <div style='text-align: center;'>
+        <h1 class='item1'>
+          Contact
+        </h1>
+        <h1 class='item2'>
+          GitHub
+        </h1>
+        <h1 class='item3'>
+          Cool Stuff
+        </h1>
+      </div>
+
+
 
     </div>
   </div>
