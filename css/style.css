@@ -558,7 +558,6 @@ orbit3:hover {
   transition: all 600ms;
   transform: translateY(0px);
   transition: all 0.5s;
-  max-width: 900px;
 }
 .wrap.active:before {
   height: 2000px;
