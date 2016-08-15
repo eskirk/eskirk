@@ -31,9 +31,9 @@
       angle = angle + 360;
     }
     var transformPoster = 'blackstar:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
-    var transformOrbit1 = 'orbit1:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #111);}';
-    var transformOrbit2 = 'orbit2:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #111);}';
-    var transformOrbit3 = 'orbit3:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #111);}';
+    var transformOrbit1 = 'orbit1:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    var transformOrbit2 = 'orbit2:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    var transformOrbit3 = 'orbit3:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
     document.querySelector('body style').innerHTML = transformPoster + transformOrbit1 + transformOrbit2 + transformOrbit3;
   }
   </script>
