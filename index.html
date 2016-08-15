@@ -12,6 +12,7 @@
   <link rel='stylesheet' type'text/css' href='css/style.css' />
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
 </head>
 
@@ -38,44 +39,56 @@
   }
   </script>
   <script>
-    $(document).ready(function() {
-      $('.orbit1').on({
-        mouseenter: function() {
-          $('.item1').animate({
-            opacity: 1
-          });
-        },
-        mouseleave: function() {
-          $('.item1').animate({
-            opacity: 0
-          });
-        }
-      });
-      $('.orbit2').on({
-        mouseenter: function() {
-          $('.item2').animate({
-            opacity: 1
-          });
-        },
-        mouseleave: function() {
-          $('.item2').animate({
-            opacity: 0
-          });
-        }
-      });
-      $('.orbit3').on({
-        mouseenter: function() {
-          $('.item3').animate({
-            opacity: 1
-          });
-        },
-        mouseleave: function() {
-          $('.item3').animate({
-            opacity: 0
-          });
-        }
-      });
+  $(document).ready(function() {
+    $('.orbit1').on({
+      mouseenter: function() {
+        $('.item1').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item1').animate({
+          opacity: 0
+        });
+      }
     });
+    $('.orbit2').on({
+      mouseenter: function() {
+        $('.item2').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item2').animate({
+          opacity: 0
+        });
+      }
+    });
+    $('.orbit3').on({
+      mouseenter: function() {
+        $('.item3').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item3').animate({
+          opacity: 0
+        });
+      }
+    });
+  });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('.orbit1').on('click', function(){
+      $('.wrap, .button').toggleClass('active');
+      return false;
+    });
+    $('.wrap').on('click', function() {
+      $('.wrap, .button').toggleClass('active');
+      return true;
+    });
+  });
   </script>
 
   <div id="featureBox"></div>
@@ -83,38 +96,71 @@
     <div id='featureBackground' style='pointer-events:none;'></div>
     <div class='main'>
       <div id='top'>
-        <span class='title'>Elliot Kirk</span>
-        <span class='sub'>Computer Science at Cal Poly</span>
+        <span class='title shade'>Elliot Kirk</span>
+        <span class='sub shade'>Computer Science at Cal Poly</span>
       </div>
       <a href='#' onclick='blackstarClicked()'>
       <style id='style'></style>
       <blackstar></blackstar>
-      </a>
-      <orbit1 class='orbit1 innershadow hidden' >
-      </orbit1>
+    </a>
+    <orbit1 class='orbit1 innershadow hidden' >
+    </orbit1>
 
+    <a href='https://github.com/eskirk' target='_blank'>
       <orbit2 class='orbit2 innershadow hidden'>
       </orbit2>
+    </a>
 
-      <orbit3 class='orbit3 innershadow hidden'>
-      </orbit3>
+    <orbit3 class='orbit3 innershadow hidden'>
+    </orbit3>
 
-      <div style='text-align: center;'>
-        <h1 class='item1'>
-          Contact
-        </h1>
-        <h1 class='item2'>
-          GitHub
-        </h1>
-        <h1 class='item3'>
-          Cool Stuff
-        </h1>
-      </div>
-
-
-
+    <div style='text-align: center;'>
+      <h1 class='item1 shade'>
+        About Me
+      </h1>
+      <h1 class='item2 shade'>
+        My GitHub
+      </h1>
+      <h1 class='item3 shade'>
+        Cool Stuff
+      </h1>
     </div>
   </div>
+  <div class='wrap'>
+    <div class='content'>
+      <h1 class='about' style='font-weight: bolder;'>Hey there, my name is Elliot Kirk</h1>
+      <h2 class='about'>
+        I go to Cal Poly in San Luis Obispo and I study Computer Science :^)
+      </h2>
+      <h2 class='about'>
+        I'm about to begin my third year here and hope to emphasize my studies on Machine Learning and Data Science,
+        the two fields that I believe will have the biggest impact on the world in these coming years (spooky stuff).
+      </h2>
+      <h2 class='about'>
+        Aside from just writing code, some of my other passions include slacklining and practicing yoga (sometimes at the same time :O !!).
+      </h2>
+      <h2 class='about'>
+        I worked a paid internship throughout the Summer of 2016 with Project Jupyter, a browser-based interactive computing company. I spent most of my
+        time developing a new product called JupyterLab, an extension of the original product, the Jupyter Notebook.
+        I spent a whole lot of time working with Git and wrote mostly in JavaScript (TypeScript specifically), HTML, and CSS.
+      </h2>
+      <h2 class='about'>
+        If you are interested in having me do any work for you, feel free to contact me! I love broadening my horizons and learning about new projects, so message away.
+      </h2>
+      <hr />
+      <h1 class='about' style='font-weight: bolder;'>Contact Info and Other Goodies</h1>
+      <h2 class='about'>
+        916.221.2316
+      </h2>
+      <h2 class='about'>
+        elliot.s.kirk@gmail.com
+      </h2>
+      <h2 class='about'>
+        <a href='Elliot_Resume.pdf' target='_blank' class='about'>my resume</a>
+      </h2>
+    </div>
+  </div>
+</div>
 
 
 </body>
