@@ -519,10 +519,6 @@ orbit3:hover {
   display: block;
 }
 
-/*h2 + h2 {
-  margin: 10px 0 10px 0;
-}*/
-
 .wrap {
   position: absolute;
   overflow: hidden;
@@ -562,6 +558,7 @@ orbit3:hover {
   transition: all 600ms;
   transform: translateY(0px);
   transition: all 0.5s;
+  max-width: 900px;
 }
 .wrap.active:before {
   height: 2000px;
