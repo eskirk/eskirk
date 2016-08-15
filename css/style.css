@@ -533,9 +533,13 @@ orbit3:hover {
   transition: all 0.5s;
   visibility: hidden;
   z-index: 5000;
+  overflow: hidden;
 }
 .wrap .content {
   opacity: 0;
+}
+.content {
+  overflow-y: auto;
 }
 .wrap:before {
   position: absolute;
@@ -558,6 +562,7 @@ orbit3:hover {
   transition: all 600ms;
   transform: translateY(0px);
   transition: all 0.5s;
+  overflow-y: auto;
 }
 .wrap.active:before {
   height: 3000px;
