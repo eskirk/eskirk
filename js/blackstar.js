@@ -43,20 +43,7 @@ var blackstarClicked = function() {
       top: getPos3()
     });
   }
-  var timeoutHandle;
-  var stickTimeoutHandle;
-  if (Math.random() <= 0.2) {
-    if (stickOverride === false) {
-      createStick();
-      spawnStick($('.man1'), 5000);
-      spawnStick($('.man2'), 5000);
-      spawnStick($('.man3'), 5000);
-      spawnStick($('.man4'), 5000);
-      stickOverride = true;
-      stickTimeoutHandle = window.setTimeout(stickmanOverride, 10000);
-    }
-  }
-
+    
   starfield();
   if (starOverride === false) {
     starOverride = true;
@@ -95,52 +82,6 @@ centerX = $(".body").width() / 2,
 radius = Math.max(centerX, centerY),
 _isOldIE = (document.all && !document.addEventListener);
 
-
-/**
-* Stickman Stuff
-*/
-
-function stickmanOverride() {
-  if (stickOverride === true) {
-    stickOverride = false;
-    $('.man1').remove();
-    $('.man2').remove();
-    $('.man3').remove();
-    $('.man4').remove();
-  }
-}
-
-var createStick = function() {
-  var man;
-  var choice = Math.random();
-
-  if (choice >= 0.75) {
-    man = $("<img src='stick_people.png' class='man1 hidden' id='man'/>");
-  }
-  else if (choice >= 0.5) {
-    man = $("<img src='stick_people.png' class='man2 hidden' id='man'/>");
-  }
-  else if (choice >= 0.25) {
-    man = $("<img src='stick_people.png' class='man3 hidden' id='man'/>");
-  }
-  else {
-    man = $("<img src='stick_people.png' class='man4 hidden' id='man'/>");
-  }
-
-  man.appendTo('.feature');
-  $('.man1').toggleClass('hidden');
-  $('.man2').toggleClass('hidden');
-  $('.man3').toggleClass('hidden');
-  $('.man4').toggleClass('hidden');
-};
-
-var spawnStick = function($man, speed) {
-
-  $man.animate({
-    left: "100%",
-    top: getVertPos()
-  }, speed);
-};
 
 /**
 * Comet Stuff
