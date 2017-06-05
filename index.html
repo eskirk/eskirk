@@ -35,7 +35,8 @@
     var transformOrbit1 = 'orbit1:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
     var transformOrbit2 = 'orbit2:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
     var transformOrbit3 = 'orbit3:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
-    document.querySelector('body style').innerHTML = transformPoster + transformOrbit1 + transformOrbit2 + transformOrbit3;
+    var transformOrbit4 = 'orbit4:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    document.querySelector('body style').innerHTML = transformPoster + transformOrbit1 + transformOrbit2 + transformOrbit3 + transformOrbit4;
   }
   </script>
   <script>
@@ -76,6 +77,18 @@
         });
       }
     });
+    $('.orbit4').on({
+      mouseenter: function() {
+        $('.item4').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item4').animate({
+          opacity: 0
+        });
+      }
+    });
   });
   </script>
   <script>
@@ -98,7 +111,7 @@
     <div class='main'>
       <div id='top'>
         <span class='title shade'>The Flow State</span>
-        <span class='sub shade'>The Human Peak Experience</span>
+        <span class='sub shade'>The Peak Human Experience</span>
       </div>
       <a href='#' onclick='blackstarClicked()'>
       <style id='style'></style>
@@ -114,16 +127,22 @@
 
     <orbit3 class='orbit3 innershadow hidden'>
     </orbit3>
+        
+    <orbit4 class='orbit4 innershadow hidden'>
+    </orbit4>
 
     <div style='text-align: center;'>
       <h1 class='item1 shade'>
-        Podcast
+        Blog Posts
       </h1>
       <h1 class='item2 shade'>
         Network Visualization
       </h1>
       <h1 class='item3 shade'>
-        Blog Posts
+        Conclusion
+      </h1>
+      <h1 class='item4 shade'>
+        Podcast  
       </h1>
     </div>
   </div>

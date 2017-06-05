@@ -27,6 +27,10 @@ var blackstarClicked = function() {
       opacity: 0.3,
       top: '50%'
     });
+    $('.orbit4').animate({
+      opacity: 0.3,
+      top: '50%'
+    })
   }
   else if (menusOpen === false){
     menusOpen = true;
@@ -42,6 +46,10 @@ var blackstarClicked = function() {
       opacity: 1,
       top: getPos3()
     });
+    $('.orbit4').animate({
+      opacity: 1,
+      top: getPos4()
+    })
   }
     
   starfield();
@@ -67,6 +75,11 @@ var getPos2 = function() {
 
 var getPos3 = function() {
   var rtn = ((($(document).height() / 2) + 140) / ($(document).height())) * 100;
+  return rtn + '%';
+};
+
+var getPos4 = function() {
+  var rtn = ((($(document).height() / 2) - 140) / ($(document).height())) * 100;
   return rtn + '%';
 };
 

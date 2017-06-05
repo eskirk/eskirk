@@ -84,6 +84,19 @@ body {
   font-weight: bolder;
 }
 
+.item4 {
+  top: 80%;
+  display: table;
+  position: absolute;
+  font-family: 'Syncopate', sans-serif;
+  margin: auto;
+  opacity: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: bolder;
+}
+
 .shade {
   text-shadow: 4px 4px 2px #222;
 }
@@ -155,7 +168,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: url('../space2.jpg');
+  background: url('../brain.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -338,6 +351,45 @@ orbit3:after {
   box-shadow: 0 0 5px #fff;
 }
 orbit3:hover {
+  animation: brighter 1s;
+  -webkit-animation: brighter 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+orbit4 {
+  opacity: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) translateZ(100px);
+  transform: translate(-50%, -50%) translateZ(100px);
+  box-shadow: 0 16px 30px -5px rgba(0, 0, 0, 1);
+  animation: darker 1s;
+  -webkit-animation: darker 1s;
+  z-index: 2;
+}
+orbit4:after {
+  content: '';
+  display: block;
+  width: 57px;
+  height: 57px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: -webkit-linear-gradient(#18242f, #000);
+  background: linear-gradient(#18242f, #000);
+  z-index: 2;
+  box-shadow: 0 0 5px #fff;
+}
+orbit4:hover {
   animation: brighter 1s;
   -webkit-animation: brighter 1s;
   animation-fill-mode: forwards;
