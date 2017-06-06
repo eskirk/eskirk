@@ -11,9 +11,9 @@
   <!-- CSS -->
   <link rel='stylesheet' type'text/css' href='css/style.css' />
   <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,900" rel="stylesheet">
 </head>
 
 <body>
@@ -95,11 +95,22 @@
   var open = false;
   $(document).ready(function() {
     $('.orbit1').on('click', function(){
-      $('.wrap, .button').toggleClass('active');
+      $('#wrap1, .button').toggleClass('active');
       return false;
     });
-    $('.wrap').on('click', function() {
-      $('.wrap, .button').toggleClass('active');
+    $('.orbit4').on('click', function(){
+      $('#wrap4, .button').toggleClass('active');
+      return false;
+    });
+      
+      
+      
+    $('#wrap1').on('click', function() {
+      $('#wrap1, .button').toggleClass('active');
+      return true;
+    });
+    $('#wrap4').on('click', function() {
+      $('#wrap4, .button').toggleClass('active');
       return true;
     });
   });
@@ -120,7 +131,7 @@
     <orbit1 class='orbit1 innershadow hidden' >
     </orbit1>
 
-    <a href='https://github.com/eskirk' target='_blank'>
+    <a href='https://prezi.com/p/daglrhzqkcw9/' target='_blank'>
       <orbit2 class='orbit2 innershadow hidden'>
       </orbit2>
     </a>
@@ -147,38 +158,56 @@
     </div>
   </div>
 </div>
-<div class='wrap'>
+    
+<div class='wrap' id="wrap1">
   <div class='content'>
-    <h1 class='about' style='font-weight: bolder;'>Hey there, my name is Elliot Kirk</h1>
+    <h1 class='blog-title' style='color: #000;'>Blog Posts</h1>
+      
+    <a href='content/BlogPost1.pdf' target='_blank'>
+      <h2>
+        Blog Post 1 - The Flow State
+      </h2>
+    </a>
+    <p class='blog'>
+        A blog about the flow state from a general point of view. This blog covers the topics of what the flow state is,
+        how you enter it, the features of a flow state, and other general information.
+    </p>
+      
+    <a href='content/BlogPost2.pdf' target='_blank'>
+      <h2>
+        Blog Post 2 - What is Group Flow and Why is it Awesome?
+      </h2>  
+    </a>
+    <p class='blog'>
+        This blog covers the concept of group flow - a group state of mind in which all members of said group are working 
+        to their maximum potential. 
+    </p>
+      
+    <a href='content/BlogPost3.pdf' target='_blank'>
+      <h2>
+        Blog Post 3 - The Benefits of the Flow State
+      </h2>
+    </a>
+    <p class='blog'>
+        This blog post covers what the benefits of finding your flow are, backed up by both scientific research and anecdotal evidence. 
+    </p>
+      
+  </div>
+</div>
+
+<div class='wrap' id="wrap4">
+  <div class='content'>
+    <h1 class='about'>
+        What is the flow state?
+    </h1>
     <h2 class='about'>
-      I go to Cal Poly in San Luis Obispo and I study Computer Science :^)
+        In this podcast I discuss exactly what the flow state is. I discuss the origins of the term "flow state", as well as
+        some of the applications and side effects of the flow state. Enjoy!
     </h2>
-    <h2 class='about'>
-      I'm about to begin my third year here and hope to emphasize my studies on Machine Learning and Data Science,
-      the two fields that I believe will have the biggest impact on the world in these coming years (spooky stuff).
-    </h2>
-    <h2 class='about'>
-      Aside from just writing code, some of my other passions include slacklining and practicing yoga (sometimes at the same time :O !!).
-    </h2>
-    <h2 class='about'>
-      I worked a paid internship throughout the Summer of 2016 with Project Jupyter, a browser-based interactive computing company. I spent most of my
-      time developing a new product called JupyterLab, an extension of the original product, the Jupyter Notebook.
-      I spent a whole lot of time working with Git and wrote mostly in JavaScript (TypeScript specifically), HTML, and CSS.
-    </h2>
-    <h2 class='about'>
-      If you are interested in having me do any work for you, feel free to contact me! I love broadening my horizons and learning about new projects, so message away.
-    </h2>
-    <hr />
-    <h1 class='about' style='font-weight: bolder;'>Contact Info and Other Goodies</h1>
-    <h2 class='about'>
-      916.221.2316
-    </h2>
-    <h2 class='about'>
-      elliot.s.kirk@gmail.com
-    </h2>
-    <h2 class='about'>
-      <a href='Elliot_Resume.pdf' target='_blank' class='about'>my resume</a>
-    </h2>
+    <audio controls>
+      <source src="content/podcast.mp3" type="audio/mpeg">
+      Your browser does not support this audio element. 
+    </audio>
   </div>
 </div>
 

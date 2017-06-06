@@ -12,6 +12,8 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
 }
 
 .title {
@@ -19,18 +21,19 @@ body {
   margin: 0 auto;
   display: table;
   font-size: 60px;
-  line-height: 170px;
-  font-family: 'Syncopate', sans-serif;
-  font-weight: bolder;
+  line-height: 100px;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+  padding-top: 40px;
 }
 
 .sub {
   position: relative;
   margin: 0 auto;
   display: table;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 20px;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 .main {
@@ -49,52 +52,56 @@ body {
   top: 80%;
   display: table;
   position: absolute;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   margin: auto;
   opacity: 0;
   left: 50%;
   right: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-weight: bolder;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 .item2 {
   top: 80%;
   display: table;
   position: absolute;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   margin: auto;
   opacity: 0;
   left: 50%;
   right: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-weight: bolder;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 .item3 {
   top: 80%;
   display: table;
   position: absolute;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   margin: auto;
   opacity: 0;
   left: 50%;
   right: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-weight: bolder;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 .item4 {
   top: 80%;
   display: table;
   position: absolute;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   margin: auto;
   opacity: 0;
   left: 50%;
   right: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-weight: bolder;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 .shade {
@@ -240,7 +247,7 @@ blackstar:after {
 /* Orbit Stuff */
 
 orbit1 {
-  opacity: 0;
+  opacity: .8;
   display: block;
   width: 60px;
   height: 60px;
@@ -257,6 +264,7 @@ orbit1 {
   z-index: 2;
 }
 orbit1:after {
+  opacity: .8;
   content: '';
   display: block;
   width: 57px;
@@ -280,7 +288,7 @@ orbit1:hover {
 }
 
 orbit2 {
-  opacity: 0;
+  opacity: .8;
   display: block;
   width: 60px;
   height: 60px;
@@ -296,6 +304,7 @@ orbit2 {
   z-index: 2;
 }
 orbit2:after {
+  opacity: .8;
   content: '';
   display: block;
   width: 57px;
@@ -319,7 +328,7 @@ orbit2:hover {
 }
 
 orbit3 {
-  opacity: 0;
+  opacity: .8;
   display: block;
   width: 60px;
   height: 60px;
@@ -335,6 +344,7 @@ orbit3 {
   z-index: 2;
 }
 orbit3:after {
+  opacity: .8;
   content: '';
   display: block;
   width: 57px;
@@ -358,7 +368,7 @@ orbit3:hover {
 }
 
 orbit4 {
-  opacity: 0;
+  opacity: .8;
   display: block;
   width: 60px;
   height: 60px;
@@ -374,6 +384,7 @@ orbit4 {
   z-index: 2;
 }
 orbit4:after {
+  opacity: .8;
   content: '';
   display: block;
   width: 57px;
@@ -394,6 +405,30 @@ orbit4:hover {
   -webkit-animation: brighter 1s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
+}
+
+/* Blog posts */
+.blog {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+.blog-title {
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  font-size: 50px;
+  line-height: 100px;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
+  padding-top: 40px;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
 }
 
 /* Animation Stuff */
@@ -568,8 +603,9 @@ orbit4:hover {
 
 .about {
   color: #000;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   display: block;
+  font-weight: 400;
 }
 
 .wrap {
