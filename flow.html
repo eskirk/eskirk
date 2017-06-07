@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Flow State</title>
+  <!-- JS -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'   integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='   crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js'></script>
+  <script src='http://www.greensock.com/js/src/plugins/Physics2DPlugin.min.js'></script>
+  <script src='js/blackstar.js'></script>
+  <!-- CSS -->
+  <link rel='stylesheet' type='text/css' href='css/style.css' />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,900" rel="stylesheet">
+</head>
+
+<body>
+  <script>
+  // Controls dynamic star movement
+  'use strict';
+  document.querySelector('body').addEventListener('mousemove', function (e) {
+    moveShade(e);
+  });
+  var w = window.innerWidth, h = window.innerHeight;
+  function moveShade(e) {
+    var pageY, pageX;
+    pageY = e.pageY || document.documentElement.clientHeight / 2, pageX = e.pageX || document.documentElement.clientWidth / 2;
+    var offsetX = 0.5 - pageX / w, offsetY = 0.5 - pageY / h, dy = e.pageY - h / 2, dx = e.pageX - w / 2, theta = Math.atan2(dy, dx), angle = theta * 180 / Math.PI - 90;
+    if (angle < 0) {
+      angle = angle + 360;
+    }
+    var transformPoster = 'blackstar:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    var transformOrbit1 = 'orbit1:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    var transformOrbit2 = 'orbit2:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    var transformOrbit3 = 'orbit3:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    var transformOrbit4 = 'orbit4:after { transform: translate(' + -(dx / 50 + 50) + '%, ' + -(dy / 50 + 50) + '%) translateZ(100px); background: linear-gradient(' + angle + 'deg,  #18242f, #000);}';
+    document.querySelector('body style').innerHTML = transformPoster + transformOrbit1 + transformOrbit2 + transformOrbit3 + transformOrbit4;
+  }
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('.orbit1').on({
+      mouseenter: function() {
+        $('.item1').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item1').animate({
+          opacity: 0
+        });
+      }
+    });
+    $('.orbit2').on({
+      mouseenter: function() {
+        $('.item2').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item2').animate({
+          opacity: 0
+        });
+      }
+    });
+    $('.orbit3').on({
+      mouseenter: function() {
+        $('.item3').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item3').animate({
+          opacity: 0
+        });
+      }
+    });
+    $('.orbit4').on({
+      mouseenter: function() {
+        $('.item4').animate({
+          opacity: 1
+        });
+      },
+      mouseleave: function() {
+        $('.item4').animate({
+          opacity: 0
+        });
+      }
+    });
+  });
+  </script>
+    
+  <script>
+  var open = false;
+  $(document).ready(function() {
+    $('.orbit1').on('click', function(){
+      $('#wrap1, .button').toggleClass('active');
+      return false;
+    });
+    $('.orbit4').on('click', function(){
+      $('#wrap4, .button').toggleClass('active');
+      return false;
+    });
+      
+    $('#wrap1').on('click', function() {
+      $('#wrap1, .button').toggleClass('active');
+      return true;
+    });
+    $('#wrap4').on('click', function() {
+      $('#wrap4, .button').toggleClass('active');
+      return true;
+    });
+  });
+  </script>
+
+  <div id="featureBox"></div>
+  <div class="feature" id="featureAnimation">
+    <div id='featureBackground' style='pointer-events:none;'></div>
+    <div class='main'>
+      <div id='top'>
+        <span class='title shade'>The Flow State</span>
+        <span class='sub shade'>The Peak Human Experience</span>
+      </div>
+      <a href='#' onclick='blackstarClicked()'>
+      <style id='style'></style>
+      <blackstar></blackstar>
+    </a>
+    <orbit1 class='orbit1 innershadow hidden' >
+    </orbit1>
+
+    <a href='https://prezi.com/p/daglrhzqkcw9/' target='_blank'>
+      <orbit2 class='orbit2 innershadow hidden'>
+      </orbit2>
+    </a>
+
+    <orbit3 class='orbit3 innershadow hidden'>
+    </orbit3>
+        
+    <orbit4 class='orbit4 innershadow hidden'>
+    </orbit4>
+
+    <div style='text-align: center;'>
+      <h1 class='item1 shade'>
+        Blog Posts
+      </h1>
+      <h1 class='item2 shade'>
+        Network Visualization
+      </h1>
+      <h1 class='item3 shade'>
+        Conclusion
+      </h1>
+      <h1 class='item4 shade'>
+        Podcast  
+      </h1>
+    </div>
+  </div>
+</div>
+    
+<div style='text-align: center;'>
+    <h1 class='click-me shade'>
+        Click Me  
+    </h1>    
+</div>
+    
+<div class='wrap' id="wrap1">
+  <div class='content'>
+    <h1 class='blog-title' style='color: #000;'>Blog Posts</h1>
+      
+    <a href='content/BlogPost1.pdf' target='_blank'>
+      <h2>
+        Blog Post 1 - The Flow State
+      </h2>
+    </a>
+    <p class='blog'>
+        A blog about the flow state from a general point of view. This blog covers the topics of what the flow state is,
+        how you enter it, the features of a flow state, and other general information.
+    </p>
+      
+    <a href='content/BlogPost2.pdf' target='_blank'>
+      <h2>
+        Blog Post 2 - What is Group Flow and Why is it Awesome?
+      </h2>  
+    </a>
+    <p class='blog'>
+        This blog covers the concept of group flow - a group state of mind in which all members of said group are working 
+        to their maximum potential. 
+    </p>
+      
+    <a href='content/BlogPost3.pdf' target='_blank'>
+      <h2>
+        Blog Post 3 - The Benefits of the Flow State
+      </h2>
+    </a>
+    <p class='blog'>
+        This blog post covers what the benefits of finding your flow are, backed up by both scientific research and anecdotal evidence. 
+    </p>
+      
+  </div>
+</div>
+
+<div class='wrap' id="wrap4">
+  <div class='content'>
+    <h1 class='about blog-title'>
+        What is the flow state?
+    </h1>
+    <h2 class='about'>
+        In this podcast I discuss exactly what the flow state is. I discuss the origins of the term "flow state", as well as
+        some of the applications and side effects of the flow state. Enjoy!
+    </h2>
+    <audio controls>
+      <source src="content/podcast.mp3" type="audio/mpeg">
+      Your browser does not support this audio element. 
+    </audio>
+  </div>
+</div>
+
+
+</body>
+</html>

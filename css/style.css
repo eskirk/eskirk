@@ -1,3 +1,67 @@
+/* Landing */
+
+.landing {
+  background-image: url('../gray-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#wu-wei {
+  opacity: 0.6;
+  animation: spin 5s;
+  -webkit-animation: spin 5s;
+  padding-top: 10%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 60% 62%;
+  width: 512px;
+  height: auto;
+}
+
+.flow-text {
+    padding-top: 10%;
+    color: #FFF;
+    font-size: 25px;
+}
+
+.flow-state1 {
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFF;
+    display: none;
+}
+
+.flow-state2 {
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFF;
+    display: none;
+}
+
+.flow-state3 {
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFF;
+    display: none;
+}
+
+.flow-state4 {
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFF;
+    display: none;
+}
+
+.continue {
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFF;
+    display: none;
+    font-weight: 500;
+}
+
+.flow-title {
+    text-shadow: 3px 3px 10px rgba(100, 100, 100, 1);
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+    display: none;
+}
 
 /* Title */
 
@@ -124,64 +188,12 @@ body {
   text-shadow: 5px 5px 5px #222;
 }
 
+/* Blog Stuff */
 
-/* Stick Man */
-.man1 {
-  position: absolute;
-  height: 200px;
-  left: 0%;
-  top: 20%;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 4000ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
+a {
+  color: rgb(115, 78, 145)
 }
 
-.man2 {
-  position: absolute;
-  height: 200px;
-  left: 0%;
-  top: 40%;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 4000ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-}
-
-.man3 {
-  position: absolute;
-  height: 200px;
-  left: 0%;
-  top: 60%;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 4000ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-}
-
-.man4 {
-  position: absolute;
-  height: 200px;
-  left: 0%;
-  top: 80%;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 4000ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-}
-
-@-moz-keyframes spin {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
-}
 
 /* Blackstar Stuff */
 
@@ -191,7 +203,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: url('../brain.jpg');
+  background: url('../gray-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -517,6 +529,19 @@ a:visited {
   to {
     box-shadow: 0 0 200px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
+}
+
+@-moz-keyframes spin {
+    0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
 }
 
 /* Comet Stuff */
