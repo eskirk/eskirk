@@ -1,7 +1,6 @@
 
 /* Title */
 
-
 body {
   color: white;
   text-align: center;
@@ -43,6 +42,23 @@ body {
 #top {
   background-color: transparent;
   opacity: .9;
+}
+
+.click-me {
+  top: 60%;
+  display: table;
+  position: absolute;
+  font-family: 'Maven Pro', sans-serif;
+  margin: auto;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.hide {
+  display: none !important;
 }
 
 
@@ -105,7 +121,7 @@ body {
 }
 
 .shade {
-  text-shadow: 4px 4px 2px #222;
+  text-shadow: 5px 5px 5px #222;
 }
 
 
@@ -192,7 +208,7 @@ body:after {
 }
 
 .innershadow {
-  box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+  box-shadow: 0 0 200px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
 }
 
 blackstar {
@@ -205,7 +221,7 @@ blackstar {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) translateZ(100px);
   transform: translate(-50%, -50%) translateZ(100px);
-  box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), 0 0 50px rgba(118, 218, 255, 0.8);
+  box-shadow: 0 0 200px rgb(65, 115, 130), 0 0 50px rgba(118, 218, 255, 0.8);
   background: #efefef;
   z-index: 50;
 }
@@ -423,6 +439,7 @@ orbit4:hover {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 400;
   padding-top: 40px;
+  text-shadow: 3px 3px 10px rgba(150, 150, 150, 1);
 }
 a:link {
   text-decoration: none;
@@ -468,37 +485,37 @@ a:visited {
 
 @keyframes brighter {
   from {
-    box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
   to {
-    box-shadow: 0 0 200px 30px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px 30px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
 }
 
 @-webkit-keyframes brighter {
   from {
-    box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
   to {
-    box-shadow: 0 0 200px 30px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px 30px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
 }
 
 @keyframes darker {
   from {
-    box-shadow: 0 0 200px 30px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px 30px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
   to {
-    box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
 }
 
 @-webkit-keyframes darker {
   from {
-    box-shadow: 0 0 200px 30px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px 30px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
   to {
-    box-shadow: 0 0 200px rgba(148, 0, 255, 0.9), inset 0 0 50px -15px rgba(148, 0, 255, 0.9);
+    box-shadow: 0 0 200px rgb(65, 115, 130), inset 0 0 50px -15px rgb(65, 115, 130);
   }
 }
 

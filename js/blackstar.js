@@ -53,7 +53,11 @@ var blackstarClicked = function() {
     $('.orbit4').animate({
       opacity: 1,
       top: getPos4()
-    })
+    });
+      
+    $('.click-me').fadeToggle('slow', 'linear', function(){
+      $('.click-me').remove();
+    });
   }
 };
 

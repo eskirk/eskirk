@@ -91,6 +91,7 @@
     });
   });
   </script>
+    
   <script>
   var open = false;
   $(document).ready(function() {
@@ -102,8 +103,6 @@
       $('#wrap4, .button').toggleClass('active');
       return false;
     });
-      
-      
       
     $('#wrap1').on('click', function() {
       $('#wrap1, .button').toggleClass('active');
@@ -159,6 +158,12 @@
   </div>
 </div>
     
+<div style='text-align: center;'>
+    <h1 class='click-me shade'>
+        Click Me  
+    </h1>    
+</div>
+    
 <div class='wrap' id="wrap1">
   <div class='content'>
     <h1 class='blog-title' style='color: #000;'>Blog Posts</h1>
@@ -197,7 +202,7 @@
 
 <div class='wrap' id="wrap4">
   <div class='content'>
-    <h1 class='about'>
+    <h1 class='about blog-title'>
         What is the flow state?
     </h1>
     <h2 class='about'>
