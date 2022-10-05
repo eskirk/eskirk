@@ -1,2 +1,2 @@
-My name is Elliot - I do web development with an emphasis on fun, interactive visualizations. 
+My name is Elliot - I do web development. 
 I like to slackline, highline, ski, run, bike, and juggle. 
